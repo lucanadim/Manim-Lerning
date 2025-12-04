@@ -68,6 +68,8 @@ class Day6(Scene):
         punkt3_2 = Dot(color=ORANGE).next_to(tabelle1, DOWN).shift(UP*0.2, RIGHT*1.5)
         punkt3_3 = Dot(color=ORANGE).next_to(tabelle1, DOWN).shift(UP*0.2, LEFT*1.33)
         punkt3_4 = Dot(color=ORANGE).next_to(tabelle1, DOWN).shift(UP*0.2, RIGHT*2.4)
+        punkt3_5 = Dot(color=ORANGE).next_to(tabelle1, DOWN).shift(UP*0.2, LEFT*2.31)
+        punkt3_6 = Dot(color=ORANGE).next_to(tabelle1, DOWN).shift(UP*0.2, RIGHT*3.3)
         
 
         punkt_lable1_1 = MathTex("(1,1)", color=BLUE).next_to(punkt1_1, RIGHT)
@@ -98,6 +100,13 @@ class Day6(Scene):
         graph1_9 = axes2.plot(lambda x: 4*x**2, color=BLUE)
         graph1_10 = axes2.plot(lambda x: 0.3*x**2, color=BLUE)
         graph2_1 = axes3.plot(lambda x: x**2, color=ORANGE)
+
+        linie1 = Line(punkt3_1.get_center(), punkt2_2.get_center())
+        linie2 = Line(punkt3_2.get_center(), punkt2_1.get_center())
+        linie3 = Line(punkt3_3.get_center(), punkt2_3.get_center())
+        linie4 = Line(punkt3_4.get_center(), punkt2_4.get_center())
+        linie5 = Line(punkt3_5.get_center(), punkt2_5.get_center())
+        linie6 = Line(punkt3_6.get_center(), punkt2_6.get_center())
 
         #Animation----------------------------------------------------------------------
 
@@ -173,7 +182,7 @@ class Day6(Scene):
             Transform(punkt_lable1_1, punkt_lable1_10),
             Transform(graph1_1, graph1_10),
         )
-        self.wait(2)
+        self.wait()
         self.play(Unwrite(text3))
         self.play(
             Transform(text2_1, text2_11),
@@ -182,7 +191,7 @@ class Day6(Scene):
             Transform(graph1_1, graph2_1),
             Transform(axes1, axes3),
         )
-        self.wait(2)
+        self.wait()
         self.play(
             Create(punkt2_2),
             Create(punkt_lable2_2),
@@ -202,4 +211,12 @@ class Day6(Scene):
         self.play(Create(punkt3_2), run_time=0.3)
         self.play(Create(punkt3_3), run_time=0.3)
         self.play(Create(punkt3_4), run_time=0.3)
+        self.play(Create(punkt3_5), run_time=0.3)
+        self.play(Create(punkt3_6), run_time=0.3)
+        self.play(Create(linie1), run_time=0.3)
+        self.play(Create(linie2), run_time=0.3)
+        self.play(Create(linie3), run_time=0.3)
+        self.play(Create(linie4), run_time=0.3)
+        self.play(Create(linie5), run_time=0.3)
+        self.play(Create(linie6), run_time=0.3)
         self.wait(2)
