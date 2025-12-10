@@ -14,7 +14,7 @@ class Day6(Scene):
         text2_9 = MathTex("y = 4x^2", color=BLUE).scale(1.4).shift(UP*2, LEFT*5.2)
         text2_10 = MathTex("y = 0.3x^2", color=BLUE).scale(1.4).shift(UP*2, LEFT*5.2)
         text2_11 = MathTex("y = x^2", color=ORANGE).scale(1.4).shift(UP*2, LEFT*5.2)
-        text3 = Text("Ein paar Formel Beispiele \nin einem Koordinatensystem").scale(0.5).shift(DOWN*3.5, LEFT*4.8)
+        text3 = Text("Ein paar Formel Beispiele \n in einem Koordinatensystem").scale(0.5).shift(DOWN*3.5, LEFT*4.8)
 
         axes1 = Axes(
             x_range=[-7, 7, 1],
@@ -101,12 +101,12 @@ class Day6(Scene):
         graph1_10 = axes2.plot(lambda x: 0.3*x**2, color=BLUE)
         graph2_1 = axes3.plot(lambda x: x**2, color=ORANGE)
 
-        linie1 = Line(punkt3_1.get_center(), punkt2_2.get_center())
-        linie2 = Line(punkt3_2.get_center(), punkt2_1.get_center())
-        linie3 = Line(punkt3_3.get_center(), punkt2_3.get_center())
-        linie4 = Line(punkt3_4.get_center(), punkt2_4.get_center())
-        linie5 = Line(punkt3_5.get_center(), punkt2_5.get_center())
-        linie6 = Line(punkt3_6.get_center(), punkt2_6.get_center())
+        linie1 = Line(punkt3_1.get_center(), punkt2_2.get_center(), color=ORANGE)
+        linie2 = Line(punkt3_2.get_center(), punkt2_1.get_center(), color=ORANGE)
+        linie3 = Line(punkt3_3.get_center(), punkt2_3.get_center(), color=ORANGE)
+        linie4 = Line(punkt3_4.get_center(), punkt2_4.get_center(), color=ORANGE)
+        linie5 = Line(punkt3_5.get_center(), punkt2_5.get_center(), color=ORANGE)
+        linie6 = Line(punkt3_6.get_center(), punkt2_6.get_center(), color=ORANGE)
 
         #Animation----------------------------------------------------------------------
 
